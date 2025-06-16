@@ -1,5 +1,5 @@
 
-import { Database, LayoutDashboard, List, Settings } from "lucide-react";
+import { Database, LayoutDashboard, List } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Sidebar,
@@ -27,11 +27,6 @@ const items = [
     title: "Tasks",
     url: "/tasks",
     icon: List,
-  },
-  {
-    title: "Settings",
-    url: "/settings",
-    icon: Settings,
   },
 ];
 
