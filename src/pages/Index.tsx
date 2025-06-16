@@ -1,7 +1,10 @@
 
 import { Layout } from "@/components/Layout";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <div className="space-y-6">
@@ -31,10 +34,16 @@ const Index = () => {
         <div className="bg-white rounded-lg border p-6">
           <h2 className="text-lg font-semibold mb-4">Quick Actions</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <button className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600">
+            <button 
+              onClick={() => navigate('/products')}
+              className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors"
+            >
               Add Product
             </button>
-            <button className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600">
+            <button 
+              onClick={() => navigate('/tasks')}
+              className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition-colors"
+            >
               Create Task
             </button>
           </div>
